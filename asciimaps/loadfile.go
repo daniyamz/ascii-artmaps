@@ -16,6 +16,11 @@ func LoadFile(str string) (map[rune][]string, error) {
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
 
+	err = scanner.Err()
+	if err != nil {
+		return nil, errors.New("Error")
+	}
+
 	for scanner.Scan() {
 		text := scanner.Text()
 		slic = append(slic, text)

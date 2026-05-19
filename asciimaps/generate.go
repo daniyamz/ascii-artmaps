@@ -9,7 +9,8 @@ func GenerateBanner(str string, banner map[rune][]string) string {
 	for _, cha := range sstr {
 		line := RenderLine(cha, banner)
 		for _, ch := range line {
-			words.WriteString(ch + "\n")
+			words.WriteString(ch)
+			words.WriteString("\n")
 		}
 	}
 	return words.String()
