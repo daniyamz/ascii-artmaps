@@ -7,6 +7,14 @@ func GenerateBanner(str string, banner map[rune][]string) string {
 	var words strings.Builder
 
 	for _, cha := range sstr {
+		if cha == "" {
+			words.WriteString("\n")
+			continue
+		}
+		runes, err := ValidateInput(cha)
+		if err != nil {
+			return string(runes) + "\n"
+		}
 		line := RenderLine(cha, banner)
 		for _, ch := range line {
 			words.WriteString(ch)
