@@ -25,6 +25,9 @@ func LoadFile(str string) (map[rune][]string, error) {
 		text := scanner.Text()
 		slic = append(slic, text)
 	}
+	if len(slic) < 856 {
+		return nil, errors.New("banner not upto range")
+	}
 	for i := 32; i < 127; i++ {
 		stat := (i-32)*9 + 1
 		words[rune(i)] = slic[stat : stat+8]
