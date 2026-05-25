@@ -19,15 +19,14 @@ func main() {
 	input := Args[1]
 	filename := Args[2]
 
-	
 	if input == "" {
 		return
 	}
 
 	file, err := ascii.LoadFile(filename + ".txt")
 	if err != nil {
-		Println("Error occured ", err)
-		return 
+		Println("Error occured ")
+		return
 	}
 	str := ascii.GenerateBanner(input, file)
 	Print(str)
