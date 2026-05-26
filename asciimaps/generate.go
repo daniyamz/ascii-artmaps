@@ -6,8 +6,11 @@ func GenerateBanner(str string, banner map[rune][]string) string {
 	sstr := SplitInput(str)
 	var words strings.Builder
 
-	for _, cha := range sstr {
+	for i, cha := range sstr {
 		if cha == "" {
+			if i == len(sstr)-1 {
+				continue
+			}
 			words.WriteString("\n")
 			continue
 		}
