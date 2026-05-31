@@ -9,7 +9,7 @@ Below is a list of the banners:
  
 Package asciimaps
 This package contains the following function.
-  - Loadfile : This is a function that load a banner from a file into the program and return a slice a map.
+  - Loadfile : This is a function that load a banner from a file into the program and return a map and an error.
   - RensderLine : The function parameters are string and a map whos value is a slice of string and a rune as the key, it's the function that builds the characters, depending on the range the characters in the banner and returns it in a slice of string form. 
   - SplitInput : As the name implies, it's use to split the input and return a slice of string.
   - ValidateInput : It's checks for the validity of the string, if the input is an ascii character or not, it returns a rune and an error.
