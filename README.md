@@ -1,4 +1,4 @@
-                                            ASCII-ART 
+## ASCII-ART ## 
 Ascii-art is a program that represent characters of a standard ascii in a graphical form and it's CLI (command line interface) based.
 From the program we have a list of banners, banners are the text file that contains the graphical form of the ascii characters.
 
